@@ -9,10 +9,10 @@ end = len(contents)+1000000
 print end
 for i in range(end):
 	temp_string = contents[i:i+12]
-	if temp_string == "</Parameter>":
+	if temp_string == '</Parameter>':
 		contents = contents[:i+12] + '\n' + contents[i+12:]
-output_filename = file_name[:-4]+"_new"+file_name[-4:]
-output_file = open(output_filename,"wb")
+output_filename = file_name[:-4]+'_new'+file_name[-4:]
+output_file = open(output_filename,'wb')
 output_file.write(contents)
 
 print output_filename
